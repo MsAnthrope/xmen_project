@@ -1,0 +1,40 @@
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr {
+    display: table-row;
+    background-color: #A3C563;
+}
+
+#customers .comic_header {
+    background-color: #29526D;
+}
+
+#customers .comic_data {
+    background-color: #708FA3;
+}
+
+#customers tr:hover {background-color: #7A9E35;}
+// #customers .comic_data tr:hover {background-color: #486E87;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2A7C46;
+    color: white;
+}
+
+//  .table-responsive{
+//     border-radius: 20px;
+//     border-collapse: separate;
+//     border-spacing: 0;
+// }

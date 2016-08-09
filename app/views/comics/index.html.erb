@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<div>
+<h2 class="sub-header">Comic Library</h2>
+  <div class="table-responsive">
+    <table id="customers" class="table table-striped">
+      <tr>
+        <th>Trade</th>
+        <th>Issue num</th>
+        <th>Author</th>
+        <th>Publication date</th>
+        <th>Universe</th>
+        <th>Story line</th>
+        <th colspan="3"></th>
+      </tr>
+      <% @comics.each do |comic| %>
+        <tr>
+          <td><%= comic.trade_id %></td>
+          <td><%= comic.issue_num %></td>
+          <td><%= comic.author %></td>
+          <td><%= comic.publication_date %></td>
+          <td><%= comic.universe %></td>
+          <td><%= comic.story_line %></td>
+          <td><%= link_to 'Show', comic %></td>
+          <td><%= link_to 'Edit', edit_comic_path(comic) %></td>
+          <td><%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </table>
+    <%= link_to "New Comic", new_comic_path(color: "blue"), class: "btn btn-primary" %>
+  </div>
+</div>

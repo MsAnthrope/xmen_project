@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @trade.author %>
+</p>
+
+<p>
+  <strong>Publication date:</strong>
+  <%= @trade.publication_date %>
+</p>
+
+<p>
+  <strong>Universe:</strong>
+  <%= @trade.universe %>
+</p>
+
+<p>
+  <strong>Story line:</strong>
+  <%= @trade.story_line %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @trade.status %>
+</p>
+
+<%= link_to 'Edit', edit_trade_path(@trade) %> |
+<%= link_to 'Back', trades_path %>
