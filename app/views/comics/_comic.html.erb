@@ -1,0 +1,15 @@
+<!--Partial for displaying an individual comic's data for all fields. To use, paste-->
+<!--the following in an html file where the first reference to comic in the locals params-->
+<!--is the name of the object variable in your html file that you want the partial to use.-->
+<!--<%= render partial: "comic", locals: {comic: comic} %>-->
+
+<td class="comic_data"><%= comic.issue_num %></td>
+<td class="comic_data"><%= comic.series_title %></td>
+<td class="comic_data"><%= comic.story_arc %></td>
+<td class="comic_data"><%= comic.universe_id %></td>
+<td class="comic_data"><%= comic.publication_date %></td>
+<td class="comic_data"><%= comic.start_date %></td>
+<td class="comic_data"><%= comic.end_date %></td>
+<td class="comic_data"><%= comic.trade_id %></td>
+<td class="comic_data"><%= comic.author %></td>
+<td class="comic_data"><%= comic.status %></td>

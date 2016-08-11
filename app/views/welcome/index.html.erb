@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>X-Men Library</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -54,7 +54,7 @@
                   <th>Id</th>
                   <th>Trade #</th>
                   <th>Author</th>
-                  <th>Storyline</th>
+                  <th>Series Title</th>
                   <th>Status</th>
                 </tr>
                 <% @trades.each do |t| %>
@@ -62,32 +62,33 @@
                     <td><%= t.id %></td>  
                     <td><%= t.author %></td>
                     <td><%= t.publication_date %></td>
-                    <td><%= t.story_line %></td>
+                    <td><%= t.series_title %></td>
                     <td><%= t.status %></td>
                   </tr>
                   <% if t.comics.empty? == false %>
                     <!--NESTED TABLE START-->
                     <tr class="<%= t.id %>" style="display:none;">
-                      <th class="comic_header">Id</th>
                       <th class="comic_header">Issue #</th>
+                      <th class="comic_header">Series Title #</th>
+                      <th class="comic_header">Story Arc</th>
+                      <th class="comic_header">Universe</th>
+                      <th class="comic_header">Publication Date</th>
+                      <th class="comic_header">Start Date</th>
+                      <th class="comic_header">End Date</th>
                       <th class="comic_header">Trade Id</th>
                       <th class="comic_header">Author</th>
-                      <th class="comic_header">Storyline</th>
+                      <th class="comic_header">Status</th>
                     </tr>
-                    <% t.comics.each do |data| %> 
+                    <% t.comics.each do |comic| %> 
                       <tr class="<%= t.id %>" style="display:none;">
-                        <td class="comic_data"><%= data.id %></td>  
-                        <td class="comic_data"><%= data.issue_num %></td>
-                        <td class="comic_data"><%= data.trade_id %></td>
-                        <td class="comic_data"><%= data.author %></td>
-                        <td class="comic_data"><%= data.story_line %></td>
+                        <%= render partial: "comic", locals: {comic: comic} %>
                       </tr>
                     <% end %>
                     <tr class="<%= t.id %>" style="display:none;">
                       <th>Id</th>
                       <th>Trade #</th>
                       <th>Author</th>
-                      <th>Storyline</th>
+                      <th>Series Title</th>
                       <th>Status</th>
                     </tr>
                   <% end %>

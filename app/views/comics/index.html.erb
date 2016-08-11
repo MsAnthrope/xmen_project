@@ -14,12 +14,7 @@
       </tr>
       <% @comics.each do |comic| %>
         <tr>
-          <td><%= comic.trade_id %></td>
-          <td><%= comic.issue_num %></td>
-          <td><%= comic.author %></td>
-          <td><%= comic.publication_date %></td>
-          <td><%= comic.universe %></td>
-          <td><%= comic.story_line %></td>
+          <%= render partial: "comic", locals: {comic: comic} %>
           <td><%= link_to 'Show', comic %></td>
           <td><%= link_to 'Edit', edit_comic_path(comic) %></td>
           <td><%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' } %></td>

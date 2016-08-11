@@ -1,7 +1,10 @@
+
 #customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    // Below listed hides horizontal, but maybe all, scrollbars on table
+    overflow:hidden;
 }
 
 #customers td, #customers th {

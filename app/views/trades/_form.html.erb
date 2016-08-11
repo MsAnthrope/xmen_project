@@ -24,9 +24,10 @@
     <%= f.text_field :story_line %>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
+     <%= f.label :status %><br>
+     <%= select_tag(:city_id, options_for_select([[nil, 1], ['Purchased', 2], ['Received', 3], ['Read', 4]])) %>
   </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -3,6 +3,10 @@
 <head>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Indie+Flower' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script>
+  var Chartkick = {"language": "de"};
+</script>
+  <%= javascript_include_tag "https://www.google.com/jsapi" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -24,12 +28,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="comics#index">Comics</a>
+            <li><%= link_to "Comics", comics_path %>
               <ul>
                 <li><%= link_to "Add", new_comic_path %></li>
               </ul>
             </li>
-            <li><a href="trades#index">Trades</a>
+            <li><%= link_to "Trades", trades_path %>
               <ul>
                 <li><%= link_to "Add", new_trade_path %></li>
               </ul>

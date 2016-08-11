@@ -6,10 +6,7 @@ class WelcomeController < ApplicationController
      get_comics_by_trade()
   end
 
-  def about
-  end
-
-  def contact
+  def untitled1
   end
   
   #

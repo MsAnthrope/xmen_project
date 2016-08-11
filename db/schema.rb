@@ -11,27 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804015750) do
+ActiveRecord::Schema.define(version: 20160809181401) do
 
   create_table "comics", force: :cascade do |t|
     t.integer  "trade_id"
     t.integer  "issue_num"
     t.string   "author"
     t.date     "publication_date"
-    t.string   "universe"
-    t.string   "story_line"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.date     "end_date"
+    t.integer  "issue_number"
+    t.string   "series_title"
+    t.date     "start_date"
+    t.string   "story_arc"
+    t.string   "status"
+    t.string   "universe_id"
   end
 
   create_table "trades", force: :cascade do |t|
     t.string   "author"
     t.date     "publication_date"
     t.string   "universe"
-    t.string   "story_line"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "status"
+    t.string   "series_title"
   end
 
 end

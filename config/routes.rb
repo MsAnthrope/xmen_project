@@ -4,14 +4,13 @@ Rails.application.routes.draw do
 
   get '/index' => 'welcome#index'
 
-  get '/about' => 'welcome#about'
-
-  get '/contact' => 'welcome#contact'
+  get '/untitled1' => 'welcome#untitled1'
   
   get 'trades/index' => 'trades#index'
  
   get '/comics' => 'comics#index' 
   get '/comics/index' => 'comics#index'
+
   
   # get '/comics/new' => 'comics#new'
   
