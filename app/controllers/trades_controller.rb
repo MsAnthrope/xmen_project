@@ -69,6 +69,14 @@ class TradesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trade_params
-      params.require(:trade).permit(:author, :publication_date, :universe, :story_line, :status)
+      params.require(:trade).permit(:author, :publication_date, :universe_id, :story_arc, :status)
     end
+    
+  # def self.search(search)
+  #   if search
+  #     find(:all, :conditions => ['id LIKE ?', "%#{search}%"])
+  #   else
+  #     find(:all)
+  #   end
+  # end
 end

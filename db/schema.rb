@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809181401) do
+ActiveRecord::Schema.define(version: 20160829212146) do
 
   create_table "comics", force: :cascade do |t|
     t.integer  "trade_id"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160809181401) do
     t.datetime "updated_at",       null: false
     t.string   "status"
     t.string   "series_title"
+    t.string   "universe_id"
   end
 
 end

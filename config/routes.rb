@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+
   resources :trades
   resources :comics
-
+  
+  get 'search/index'
+  
   get '/index' => 'welcome#index'
 
   get '/untitled1' => 'welcome#untitled1'

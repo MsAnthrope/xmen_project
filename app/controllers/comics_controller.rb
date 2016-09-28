@@ -71,4 +71,13 @@ class ComicsController < ApplicationController
     def comic_params
       params.require(:comic).permit(:issue_num, :status, :series_title, :story_arc, :trade_id, :start_date, :end_date, :author, :publication_date, :universe_id)
     end
+    
+    
+  # def self.search(search)
+  #   if search
+  #     find(:all, :conditions => ['id LIKE ?', "%#{search}%"])
+  #   else
+  #     find(:all)
+  #   end
+  # end
 end

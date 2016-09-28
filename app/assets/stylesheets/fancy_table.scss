@@ -1,4 +1,16 @@
 
+.tbcontents {
+    display: flex;
+    align-items: center;
+}
+.tbheadercontainer {
+    font-size: 0
+}
+.tbheader {
+    font-size: 2rem;
+    box-shadow: 1px 1px 0.5px #888888;
+}
+
 #customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -13,6 +25,8 @@
 }
 
 #customers tr {
+    min-width:1400px;
+    max-width: 1400px; 
     display: table-row;
     background-color: #A3C563;
 }
@@ -36,8 +50,16 @@
     color: white;
 }
 
-//  .table-responsive{
-//     border-radius: 20px;
-//     border-collapse: separate;
-//     border-spacing: 0;
-// }
+ .table-responsive{
+     margin:auto;
+    min-width:1400px;
+    max-width: 1400px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+tr {
+
+   min-width:1400px;
+    max-width: 1400px; 
+}

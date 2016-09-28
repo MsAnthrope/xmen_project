@@ -27,15 +27,33 @@
     <%= f.label :publication_date %><br>
     <%= f.date_select :publication_date %>
   </div>
-  <div class="field">
-    <%= f.label :universe %><br>
-    <%= f.text_field :universe %>
+    <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.date_select :start_date %>
+  </div>
+    <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.date_select :end_date %>
   </div>
   <div class="field">
-    <%= f.label :story_line %><br>
-    <%= f.text_field :story_line %>
+    <%= f.label :universe_id %><br>
+    <%= f.text_field :universe_id %>
+  </div>
+    <div class="field">
+    <%= f.label :series_title %><br>
+    <%= f.text_field :series_title %>
+  </div>
+  <div class="field">
+    <%= f.label :story_arc %><br>
+    <%= f.text_field :story_arc %>
+  </div>
+    <div class="field">
+     <%= f.label :status %><br>
+     <%= select_tag(:city_id, options_for_select([[nil, 1], ['Purchased', 2], ['Received', 3], ['Read', 4]])) %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+
